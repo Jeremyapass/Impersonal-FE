@@ -1,14 +1,15 @@
 "use client";
-
-import { Button } from "@/components/ui/button";
-
+import Headline from "@/components/Organism/content/headline";
+import Hero from "@/components/Organism/content/hero";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className="p-10">
-      <div className="">asd</div>
-      <Button className="bg-red-500 w-">Button</Button>
+  const router = useRouter();
 
+  return (
+    <main className="flex flex-col">
+      <Headline />
+      <Hero />
     </main>
   );
 }

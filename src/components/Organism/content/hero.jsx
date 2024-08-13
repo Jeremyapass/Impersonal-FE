@@ -1,18 +1,18 @@
-import ContactMe from "@/components/Molecules/examplePage/contactMe";
-import Experience from "@/components/Molecules/examplePage/experience";
-import Quotes from "@/components/Molecules/examplePage/quotes";
-import Skills from "@/components/Molecules/examplePage/skills";
-import Summary from "@/components/Molecules/examplePage/summary";
+import ContactMe from "@/components/Molecules/card/contactMe";
+import Experience from "@/components/Molecules/card/1/experience";
+import Quotes from "@/components/Molecules/card/links";
+import Skills from "@/components/Molecules/card/1/skills";
+import Summary from "@/components/Molecules/card/1/summary";
 import React from "react";
 
 const Hero = () => {
   return (
-    <div className="flex">
-      <div className="flex">
+    <div className="flex self-center bg-blue-500 mt-[32px]">
+      <div className="flex mt-[32px]">
         <div className="grid-rows-3">
           <div>Foto</div>
-         <Quotes />
-         <ContactMe />
+          <Quotes />
+          <ContactMe />
         </div>
 
         <div className="grid-rows-4">

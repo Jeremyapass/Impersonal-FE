@@ -1,0 +1,22 @@
+@fonts . berarti import yang ada di dalam src 
+src = @
+
+Atomic Design : 
+- Atoms = component kecil 1 aja 
+- Molecules = gabungan beberapa component, yang menjadi bagian" dari organism
+- Orangism = Section, kayak section header, section about, section footer, section project, section hero
+
+Intinya bacanya adalah : 
+1. Kalau ada component yang bisa direuseable, itu masuk ke component. 
+2. Lihat component itu lalu bayangkan jadi Organism aja
+3. Lalu baru lah ddi dalam Organism itu pikirkan Molecules nya supaya mudah ditracing nanti
+3. Lalu baru lah di dalam Molecules itu pikirkan Atoms yang dibutuhkan di dalam Molecules supaya gampang ditracing
+
+- Boleh aja ngoding di page, tapi itu khsusus emang fungsi simple atau cuman ada di page itu doang. 
+- Jika ada component yang hanya ada di example, buat lah componentnya seperti ini 
+    --example   
+        --component
+            -- component khusus example 1.jsx
+            -- component khusus example 2.jsx
+        --page.jsx
+

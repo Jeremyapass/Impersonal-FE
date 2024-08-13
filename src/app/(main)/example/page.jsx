@@ -1,16 +1,31 @@
-import Hero from '@/components/Organism/examplePage/hero'
-import Footer from '@/components/Organism/footer'
-import Header from '@/components/Organism/header'
-import React from 'react'
+"use client";
+import UserCard from "@/components/Organism/content/userCard";
+import Image from "next/image";
+import React, { createContext, useState } from "react";
+import Share from "../../../../public/icons/share.svg";
+import PaginationVertical from "@/components/Molecules/pagination/paginationVertical";
 
 const Example = () => {
-  return (
-    <div className='flex flex-col gap-2'> {/* nanti hapus aja classname nya ini  */}
-        <Header/>
-        <Hero/>
-        <Footer/>
-    </div>
-  )
-}
+  const [page, setPage] = useState(1);
 
-export default Example
+  return (
+    <PageContext.Provider value={{ page, setPage }}>
+      <div className=" flex justify-center ">
+        <UserCard />
+        <div className="text-white mt-[100px] absolute left-[85%] w-[96px] flex flex-col px-[36px] gap-[407.5px] ">
+          <Image
+            className="mt-[44px]"
+            src={Share}
+            alt="share"
+            width={24}
+            height={24}
+          />
+          <PaginationVertical />
+        </div>
+      </div>
+    </PageContext.Provider>
+  );
+};
+
+export const PageContext = createContext();
+export default Example;
