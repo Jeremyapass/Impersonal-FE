@@ -5,10 +5,12 @@ import React from "react";
 const ContactMeButton = ({ text, logo }) => {
   return (
     <Button variant="contactMe">
-      <Image className="w-[24px] h-auto" src={logo}  alt="gambar button"/>
+      <Image priority className="h-auto w-auto" src={`/icons/${logo}.svg`} width={1} height={1} alt="gambar button"/>
       {text}
     </Button>
   );
 };
 
 export default ContactMeButton;
+
+//ganti src jadi "/icons/{logo}.png"

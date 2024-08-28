@@ -20,3 +20,6 @@ Intinya bacanya adalah :
             -- component khusus example 2.jsx
         --page.jsx
 
+Special here : 
+- useContext, CreateContext (global state, pengkondisian jika di state A ada apa, B ada apa, dst)
+- usePathname (pengkondisian jika di route A ada apa, B ada apa, dst)

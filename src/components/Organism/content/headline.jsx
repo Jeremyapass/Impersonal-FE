@@ -4,30 +4,29 @@ import React from "react";
 
 const Headline = () => {
   return (
-    <div className="text-center">
+    <div className="text-center w-[823px]">
       <div
         className={`mt-[90px] ${fonts.playfair.className} tracking-[-1.8px] leading-[70px] text-center text-[72px]`}
       >
         <p>
-          Build a <span className="italic">professional online</span>
+          Create a powerful
+          <span className="italic text-[#00C853]">personal</span>
         </p>
         <p>
-          <span className="italic">identity</span> that inspires
+          <span className="italic text-[#00C853]">branding</span> that truly
         </p>
-        <p>people!</p>
+        <p>inpires!</p>
       </div>
 
-      <div className="text-center mt-[24px] text-[20px] mb-[24px]">
+      <div className="text-center mt-[24px] text-[20px] mb-[24px] leading-6 tracking-[0.2px]">
         <p className="">
-          Build your <span className="italic text-[#00C853]">professional</span>{" "}
-          online identity, integrate your{" "}
-          <span className="italic text-[#00C853]">skills</span> and
-          <span className="italic text-[#00C853]">experience</span> in one{" "}
+          Showcase your experience and portofolio, create a powerful{" "}
+          <span className="italic text-[#00C853]">personal branding</span> and
+          make a positive impact on your future.
         </p>
-        <p>platform. Start your journey towards your dream career!</p>
       </div>
 
-      <CreateAccountButton />
+      <CreateAccountButton href={"/registration"} />
     </div>
   );
 };

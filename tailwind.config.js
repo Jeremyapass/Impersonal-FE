@@ -13,7 +13,7 @@ module.exports = {
    
     },
     letterSpacing:{
-      'rizqi' : '-0.16px',
+      'rizqi' : '0.16px',
     },
     container: {
       center: true,

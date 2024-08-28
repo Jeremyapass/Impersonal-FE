@@ -22,9 +22,12 @@ const buttonVariants = cva(
         createAccount: "bg-[#00C853] text-[#0E0E10] hover:bg-[#03662ce7]",
         contactMe:
           "bg-[#39393B] gap-[4px] justify-start text-[#FFFFFF] hover:bg-[#29292A] w-[200px]",
-        arrowButtonVerticalActive: "bg-[#39393B] ",
-        arrowButtonVerticalDisable: "bg-[#1A1A1C] ",
+        arrowButtonVerticalActive: "bg-[#39393B]",
+        arrowButtonVerticalDisable: "bg-[#1A1A1C]",
         arrowButtonHorizontal: "",
+        backButton:"",
+        sendFeedbackButton: "bg-[#39393B] gap-[4px] justify-start text-[#FFFFFF] hover:bg-[#29292A] ",
+        viewPersonalButton: " gap-[4px] justify-start bg-transparent hover:bg-[#29292A] border-[2px] border-white ",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -40,7 +43,7 @@ const buttonVariants = cva(
   }
 );
 
-const Button = React.forwardRef(
+const   Button = React.forwardRef(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (

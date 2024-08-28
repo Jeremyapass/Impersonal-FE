@@ -1,17 +1,13 @@
 "use client";
 import React, { useContext, useState, useEffect } from "react";
-import arrowKiriActive from "../../../../public/icons/ArrowKiriActive.svg";
-import arrowKiriDisable from "../../../../public/icons/ArrowKiriDisable.svg";
-import arrowKananActive from "../../../../public/icons/ArrowKananActive.svg";
-import arrowKananDisable from "../../../../public/icons/ArrowKananDisable.svg";
 import ArrowButtonVertical from "@/components/Atoms/button/arrowButtonVertical";
-import { PageContext } from "@/app/(main)/example/page";
+import { PageContext } from "@/app/providers/pageProvider";
 
 const PaginationVertical = () => {
   const { page, setPage } = useContext(PageContext);
   const [disable, setDisable] = useState({
-    atas: false,
-    bawah: false,
+    atas: page === 3,  //Agar tidak kedip : Set the initial state based on the current page
+    bawah: page === 1,  //Agar tidak kedip : Set the initial state based on the current page
   });
 
   useEffect(() => {
@@ -30,21 +26,33 @@ const PaginationVertical = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-[16px] ">
-      <ArrowButtonVertical 
-        onClick={handleClickAtas} 
-        image={disable.atas ? arrowKananDisable : arrowKananActive} 
-        bool={disable.atas} 
+    <div id="pagination" className="flex flex-col items-center gap-[16px]">
+      <ArrowButtonVertical
+        onClick={handleClickAtas}
+        image={disable.atas ? "ArrowKananDisable" : "ArrowKananActive"}
+        bool={disable.atas}
       />
       <div className="flex flex-col items-center gap-[8px]">
-        <div className={`h-[8px] w-[8px] rounded-full ${page === 1 ? "bg-white" : "bg-[#29292A]"} `}></div>
-        <div className={`h-[8px] w-[8px] rounded-full ${page === 2 ? "bg-white" : "bg-[#29292A]"}`}></div>
-        <div className={`h-[8px] w-[8px] rounded-full ${page === 3 ? "bg-white" : "bg-[#29292A]"}`}></div>
+        <div
+          className={`h-[8px] w-[8px] rounded-full ${
+            page === 1 ? "bg-white" : "bg-[#29292A]"
+          }`}
+        ></div>
+        <div
+          className={`h-[8px] w-[8px] rounded-full ${
+            page === 2 ? "bg-white" : "bg-[#29292A]"
+          }`}
+        ></div>
+        <div
+          className={`h-[8px] w-[8px] rounded-full ${
+            page === 3 ? "bg-white" : "bg-[#29292A]"
+          }`}
+        ></div>
       </div>
-      <ArrowButtonVertical 
-        onClick={handleClickBawah} 
-        image={disable.bawah ? arrowKiriDisable : arrowKiriActive} 
-        bool={disable.bawah} 
+      <ArrowButtonVertical
+        onClick={handleClickBawah}
+        image={disable.bawah ? "ArrowKiriDisable" : "ArrowKiriActive"}
+        bool={disable.bawah}
       />
     </div>
   );

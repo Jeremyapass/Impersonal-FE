@@ -69,3 +69,30 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Untuk Chrome, Safari, dan Edge */
+::-webkit-scrollbar {
+  width: 4px; /* Lebar scrollbar */
+  height: 12px; /* Tinggi scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #0E0E10; /* Warna track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A1A1C; /* Warna thumb scrollbar */
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Warna thumb scrollbar saat hover */
+}
+
+/* Untuk Firefox */
+body {
+  scrollbar-width: thin; /* Menyesuaikan ketebalan scrollbar */
+  scrollbar-color: #1A1A1C #0E0E10; /* Warna thumb dan track scrollbar */
+}
